@@ -1,7 +1,19 @@
-{% if submitted %}
-SUBMITTED! Thank you.
-{% endif %}
-<form action="" method="POST">
-  <textarea name="message"></textarea>
-  <input type="submit">
-</form>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Questions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <style>
+      textarea {
+        width: 100%;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/submit" method="POST">
+      <textarea name="message"></textarea>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

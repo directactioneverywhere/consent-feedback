@@ -8,17 +8,16 @@ db = shelve.open(path.join(app.root_path, 'shelve.db'), writeback=True)
 def index():
     return render_template('index.html')
 
-@app.route("/", methods=['POST'])
+@app.route("/submit", methods=['POST'])
 def submit():
     message = request.form['message']
-    print(message)
     db.setdefault('messages', [])
     db['messages'].append(message)
-    print(db['messages'])
-    return render_template('index.html', submitted=True)
+    return render_template('submitted.html', submitted=True)
 
 @app.route("/view")
 def view():
+    db.setdefault('messages', [])
     messages = db['messages']
     return render_template('view.html', messages=messages)
 
