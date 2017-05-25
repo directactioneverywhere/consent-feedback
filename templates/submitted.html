@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Submitted</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  </head>
-  <body>
-    <p>Your feedback was submitted. Thank you!</p>
-  </body>
-</html>
+{% extends "_base.html" %}
+{% block title %}Submitted{% endblock %}
+
+{% block content %}
+  <p>Your feedback was submitted. Thank you!</p>
+  <p><a href="/">Submit another response.</a></p>
+{% endblock %}

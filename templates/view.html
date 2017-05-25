@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Answers</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  </head>
-  <body>
-    {% if messages %}
-      {% for message in messages %}
-        {{ message }}
-        <hr>
-      {% endfor %}
-    {% else %}
-      <p>No messages found.</p>
-    {% endif %}
-  </body>
-</html>
+{% extends "_base.html" %}
+{% block title %}Answers{% endblock %}
+
+{% block content %}
+  {% if messages %}
+    {% for message in messages %}
+      {{ message }}
+      <hr>
+    {% endfor %}
+  {% else %}
+    <p>No messages found.</p>
+  {% endif %}
+{% endblock %}
