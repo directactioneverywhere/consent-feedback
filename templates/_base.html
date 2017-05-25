@@ -3,22 +3,75 @@
   <head>
     <title>{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Viga" rel="stylesheet">
     <style>
       textarea {
         width: 100%;
         height: 175px;
       }
 
+      body {
+        background-color: black;
+        color: white;
+        margin: 10px;
+        font-family: 'Roboto', sans-serif;
+      }
+
+      h1 {
+        font-family: 'Viga', sans-serif;
+      }
+
+      form {
+        margin: 10px;
+      }
+
+      input {
+        color: red;
+        text-transform: uppercase;
+        font-family: 'Viga', sans-serif;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .button {
+        width: 80%;
+        height: 20px;
+        font-family: 'Viga', sans-serif;
+        border-width: 2px;
+        border-style: solid;
+        border-color: red;
+        background-color: #ededed;
+        color: red;
+        text-transform: uppercase;
+        border-radius: 2px;
+        text-decoration: none;
+        text-align: center;
+        margin: 50px auto;
+        padding: 10px;
+      }
+
       footer {
-        color: #333;
+        color: red;
         font-size: 0.9rem;
-        margin-top: 20px;
+        margin-top: 40px;
         font-style: italic;
       }
+
+      footer a {
+        color: white;
+        text-decoration: underline;
+      }
+
     </style>
   </head>
   <body>
+    <h1>DxE CAREs</h1>
+    <h2>Consent and Survivor Support Training</h2>
     {% block content %}{% endblock %}
-    <footer>This application is <a href="https://www.gnu.org/philosophy/free-sw.en.html" target="_blank">free software</a>, and you can view the <a href="https://github.com/alexgleason/feedback" target="_blank">source code</a>.</footer>
+    <footer>
+      <img src="/static/white-logo.png">
+      This application is <a href="https://www.gnu.org/philosophy/free-sw.en.html" target="_blank">free software</a>, and you can view the <a href="https://github.com/alexgleason/feedback" target="_blank">source code</a>.</footer>
   </body>
 </html>

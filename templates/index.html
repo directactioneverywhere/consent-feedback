@@ -2,6 +2,7 @@
 {% block title %}Submit feedback{% endblock %}
 
 {% block content %}
+  <p>Submit your responses or questions anonymously here:</p>
   <form action="/submit" method="POST">
     <textarea name="message" placeholder="Type your feedback here!"></textarea>
     <input type="submit" value="Submit">
